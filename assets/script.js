@@ -17,109 +17,83 @@ function countdown () {
 };
 
 function quiz () {
+    startBtn.classList.add('hide')
+    questionContainerElement.classList.remove('hide')
     const quizQuestions = [
         {
             question: "What is the difference between <h2> and <h4>?",
-            answers: {
-                a: "There is no difference",
-                b: "<h4> is larger",
-                c: "<h2> is more important and therefore larger",
-                d: "They are one size apart"
-            },
-            correctAnswer: "c"
-        },
-        {
+            answers: [
+                { text: "There is no difference", correct: false},
+                { text: "<h4> is larger", correct: false},
+                { text: "<h2> is more important and therefore larger", correct: true },
+                { text: "They are one size apart", correct: false }
+            ],
             question: "How do you create a new Git repository?",
-            answers: {
-                a: "git init",
-                b: "git checkout",
-                c: "git status",
-                d: "git add"
-            },
-            correctAnswer: "a"
-        },
-        {
+            answers: [
+                { text: "git init", correct: true},
+                { text: "git checkout", correct: false},
+                { text: "git status", correct: false},
+                { text: "git add", correct: false}
+            ],
             question: "How do you leave hidden comments in HTML?",
-            answers: {
-                a: "/* */",
-                b: "<!-- -->",
-                c: "//",
-                d: "None of the above"
-            },
-            correctAnswer: "b"
-        },
-        {
+            answers: [
+                { text: "/* */", correct: false},
+                { text :"<!-- -->", correct: true},
+                { text: "//", correct: false},
+                { text: "None of the above", correct: false}
+            ],
             question: "How many ways are there to write a color in CSS?",
-            answers: {
-                a: "one",
-                b: "two",
-                c: "three",
-                d: "four"
-            },
-            correctAnswer: "c"
-        },
-        {
+            answers: [
+                { text: "one", correct: false},
+                { text: "two", correct: false},
+                { text: "three", correct: true},
+                { text: "four", correct: false}
+            ],
             question: "What does CSS stand for?",
-            answers: {
-                a: "Computer Style Sheets",
-                b: "Colorful Style Sheets",
-                c: "Creative Style Sheets",
-                d: "Cascading Style Sheets"
-            },
-            correctAnswer: "d"
-        },
-        {
+            answers: [
+                { text: "Computer Style Sheets", correct: false},
+                { text: "Colorful Style Sheets", correct: false},
+                { text: "Creative Style Sheets", correct: false},
+                { text: "Cascading Style Sheets", correct: true}
+            ],
             question: "Which HTML element is used to input Javascript?",
-            answers: {
-                a: "<script>",
-                b: "<js>",
-                c: "<scripts>",
-                d: "<javascript>"
-            },
-            correctAnswer: "a"
-        },
-        {
+            answers: [
+                { text: "<script>", correct: true},
+                { text: "<js>", correct: false},
+                { text: "<scripts>", correct: false},
+                { text: "<javascript>", correct: faslse}
+            ],
             question: "Which is NOT a primitive data type of Javascript?",
-            answers: {
-                a: "Boolean",
-                b: "Number",
-                c: "String",
-                d: "Array"
-            },
-            correctAnswer: "d"
-        },
-        {
+            answers: [
+                { text: "Boolean", correct: false},
+                { text: "Number", correct: false},
+                { text: "String", correct: false},
+                { text: "Array", correct: true}
+            ],
             question: "Which of these is a basic boolean operator?",
-            answers: {
-                a: "AND",
-                b: "NOT",
-                C: "OR",
-                d: "All of the above are basic boolean operators"
-            },
-            correctAnswer: "d"
-        },
-        {
+            answers: [
+                { text: "AND", correct: false},
+                { text: "NOT", correct: false},
+                { text: "OR", correct: false},
+                { text: "All of the above are basic boolean operators", correct: true},
+            ],
             question: "How would you remove the line under a hyperlink using CSS?",
-            answers: {
-                a: "text-decoration: plain",
-                b: "hyperlink: remove",
-                c: "text-decoration: none",
-                d: "You cannot remove the line under a hyperlink using CSS properties."
-            },
-            correctAnswer: "c"
-        },
-        {
+            answers: [
+                { text: "text-decoration: plain", correct: false},
+                { text: "hyperlink: remove", correct: false},
+                { text: "text-decoration: none", correct: true},
+                { text: "You cannot remove the line under a hyperlink using CSS properties."}
+            ],
             question: "What CSS rule will make flex items evenly distributed horizontally?",
-            answers: {
-                a: "justify-content: center",
-                b: "justify-content: space-between",
-                c: "justify-content: space-around",
-                d: "justify-content: stretch"
-            },
-            correctAnswer: "b"
+            answers: [
+                { text: "justify-content: center", correct: false},
+                { text: "justify-content: space-between", correct: true},
+                { text: "justify-content: space-around", correct: false},
+                { text: "justify-content: stretch", correct: false}
+            ]
         }
-    ];
-}
+    ]
+};
 
 function highScores () {
 
@@ -127,6 +101,6 @@ function highScores () {
 
 
 startBtn.addEventListener("click", countdown); {
-    startInterval();
+    setInterval();
     // quiz();
 }
