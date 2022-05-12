@@ -25,14 +25,33 @@ main {
     align-items: center;
 }
 
-#btn {
+.btn {
     background-color: red;
     color: white;
     border-radius: 15px;
-    font-size: 20px;
+    font-size: 1.8rem;
+    text-decoration: none;
 }
 
-#btn:hover {
+.btn:hover {
     cursor: pointer;
 }
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(135, 206, 235, 0.25);
+    background-color: white;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+}
+
+.choice-text {
+    padding: 1.5rem;
+}
+
 
