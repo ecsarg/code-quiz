@@ -6,13 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/style.css" />
-    <script src="./assets/script.js"></script>
+    
   </head>
 
   <header>
     <a href="index.html">Return to Quiz Page</a>
   </header>
   <main>
-    <h1>High Scores</h1>
+    <h1>High Scores</h1><br>
+    <section class="highscore">
+      <form>
+        <label for="initials">Enter your initials to save your high score!</label><br><br>
+        <input type="text" id="initials" name="initials"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+
     <ol class="highScores"></ol>
   </main>
+
+  <script src="./assets/script.js"></script>
